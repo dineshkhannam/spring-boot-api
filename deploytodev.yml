@@ -1,5 +1,7 @@
 ---
 - hosts: all
   tasks:
-  shell:
+  shell: 
+    - docker login -u admin -p admin123 35.184.10.255:8082 && \
+      docker run -itd -p 80:8080 35.184.10.255:8083/springboot:3.0
   
